@@ -10,6 +10,7 @@ I appreciate you, for everything that you are, and for everything you will be.
 I'll be here for you today.
 
 Whether you're out or not, you're still here.
+
 You're valid.
 
 For those who aren't out, I relate.
@@ -24,8 +25,7 @@ But people found me, reached out.
 
 And gave me back the hope I lost then.
 
-
-If no one else is here for you, know that I am.
+So if no one else is here for you, know that I am.
 
 No one can stop you.
 
