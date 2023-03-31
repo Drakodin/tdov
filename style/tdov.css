@@ -51,3 +51,57 @@
         opacity: 1
     }
 }
+
+.msg-container {
+    position: fixed;
+    margin: 0;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.msg-control {
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: white;
+    font-size: 32px;
+    background-color: transparent;
+}
+
+.msg-control-base {
+    display: flex;
+    width: max(160px, 20%);
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.msg-control:hover {
+    cursor: pointer;
+}
+
+.msg-control > .fa-solid {
+    transition: transform 0.25s ease-in-out;
+}
+
+.msg-control > .fa-solid:hover {
+    transform: scale(1.25);
+}
+
+.msg-txt {
+    font-size: 24px;
+    box-sizing: border-box;
+    border: 6px solid white;
+    background: #dddddd20;
+    width: 100%;
+    position: relative;
+    left: auto;
+    right: auto;
+    top: 0%;
+    padding: 40px;
+    border-radius: 20px;
+}

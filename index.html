@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>TDOV</title>
         <link rel="stylesheet" href="style/index.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Internal sheet, references FA -->
         <link rel="stylesheet" href="style/tdov.css">
         <script src="scripts/tdov.js"></script>
     </head>
@@ -11,7 +14,20 @@
         <div class="bg-1"></div>
         <div class="bg-2"></div>
         <div class="bg-3"></div>
-        <audio autoplay="true" src="media/Finding Mithral.mp3" volume="0.5" loop="true"></audio>
+        <audio class="bg-music" src="media/Finding Mithral.mp3" volume="0.5" muted=true loop></audio>
+        <div class="msg-container">
+            <div class="msg-txt">
+
+            </div>
+            <div class="msg-control-base">
+                <button class="msg-control">
+                    <i class="fa-solid fa-left-long"></i>
+                </button>
+                <button class="msg-control">
+                    <i class="fa-solid fa-right-long"></i>
+                </button>
+            </div>
+        </div>
     </body>
     <script src="scripts/index.js"></script>
 </html>

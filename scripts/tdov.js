@@ -15,11 +15,11 @@ const checkTime = (time = null) => {
 
         if (body) {
             let content = body.innerHTML
-            localStorage.setItem("webContent", content)
+            sessionStorage.setItem("webContent", content)
             document.querySelector("html").removeChild(body)
         }
     } else {
-        let content = localStorage.getItem("webContent")
+        let content = sessionStorage.getItem("webContent")
         if (content) {
             let body = document.createElement("body")
             let html = document.querySelector("html")
@@ -31,3 +31,15 @@ const checkTime = (time = null) => {
 
 // Run immediately, this is the only function in this JS file and it will be included in the <head>
 window.onload = () => checkTime()
+
+// For browsers, entry screen required as autoplay is disallowed
+let clickCount = 0
+window.onclick = () => {
+    let music = document.querySelector(".bg-music")
+    if (music && clickCount === 0) {
+        clickCount++;
+        console.log("Playing: Finding Mithral by Purple Planet...")
+        music.muted = false
+        music.play()
+    }
+}
