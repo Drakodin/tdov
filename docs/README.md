@@ -6,3 +6,7 @@ It will look like a blank site for every day except TDOV (March 31). On TDOV, it
 
 ### Can't Wait? Activate it yourself!
 It's possible to see all of this w/o it being TDOV by calling the child function with a date that refers to March 31. It does consume UNIX timestamps so do note this.
+
+## Credits
+Music: https://www.purple-planet.com
+VA: Myself
