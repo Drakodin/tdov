@@ -84,7 +84,7 @@
 .msg-container {
     position: fixed;
     margin: 0;
-    top: 60%;
+    top: 40%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -136,4 +136,12 @@
     font-family: "EduNSWACTFoundation";
     text-align: center;
     color: white;
+}
+
+.msg-sound {
+    margin: 20px;
+}
+
+.msg-sound > .fa-solid {
+    font-size: 60px;
 }

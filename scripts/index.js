@@ -41,3 +41,20 @@ function changeMessage(event) {
 for (let button of document.querySelectorAll(".control")) {
     button.addEventListener("click", changeMessage)
 }
+
+function toggleAudio(event) {
+    let audio = document.querySelector(".msg-audio")
+    let icon = event.target;
+    if (audio.paused) {
+        audio.currentTime = 0
+        audio.play()
+        icon.classList.remove("fa-volume-off")
+        icon.classList.add("fa-volume-loud")
+    } else {
+        audio.pause()
+        icon.classList.remove("fa-volume-loud")
+        icon.classList.add("fa-volume-off")
+    }
+}
+
+document.querySelector(".msg-sound-control").addEventListener("click", toggleAudio)
