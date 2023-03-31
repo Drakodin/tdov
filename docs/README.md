@@ -16,6 +16,8 @@ It's possible to see all of this w/o it being TDOV by calling the child function
 ## Known Issues
 Due to the Audio API in browsers being asynchronous, playing the audio consecutively with every message swap is very difficult.
 
+My microphone picked up on my breathing so you'll hear puffs of air. I don't have a filter, just the mic itself.
+
 ## Credits
 Music: https://www.purple-planet.com
 VA: Myself

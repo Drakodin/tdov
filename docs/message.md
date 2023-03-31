@@ -25,7 +25,7 @@ But people found me, reached out.
 
 And gave me back the hope I lost then.
 
-So if no one else is here for you, know that I am.
+[So] If no one else is here for you, know that I am.
 
 No one can stop you.
 

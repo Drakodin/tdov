@@ -47,7 +47,7 @@ const MESSAGE_PARTS = [
     "I was lost too, broken I said.",
     "But people found me, reached out.",
     "And gave me back the hope I lost then.",
-    "So if no one else is here for you, know that I am.",
+    "If no one else is here for you, know that I am.",
     "No one can stop you.",
     "Because you're powerful.",
     "Happy Trans Day of Visibility."

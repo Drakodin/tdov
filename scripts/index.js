@@ -54,18 +54,12 @@ for (let button of document.querySelectorAll(".control")) {
     button.addEventListener("click", changeMessage)
 }
 
-async function toggleAudio(event) {
+async function toggleAudio() {
     let audio = document.querySelector(".msg-audio")
-    let icon = event.target;
-    if (audio.muted) {
-        audio.muted = false
+    if (audio.paused) {
         audio.currentTime = 0
         await audio.play()
-    } else {
-        audio.muted = true
-        await audio.pause()
     }
 }
 
 document.querySelector(".msg-sound-control").addEventListener("click", toggleAudio)
-document.querySelector(".msg-audio").muted = true
