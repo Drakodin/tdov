@@ -11,3 +11,13 @@ body {
     margin: 0;
     padding: 0;
 }
+
+@font-face {
+    font-family: "Merienda";
+    src: url("fonts/Merienda-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "EduNSWACTFoundation";
+    src: url("fonts/EduNSWACTFoundation-VariableFont_wght.ttf");
+}
