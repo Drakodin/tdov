@@ -145,3 +145,7 @@
 .msg-sound > .fa-solid {
     font-size: 60px;
 }
+
+.msg-sound > .fa-solid:hover {
+    cursor: pointer;
+}

@@ -11,6 +11,7 @@ function start() {
         clickCount++;
         console.log("Playing: Finding Mithral by Purple Planet...")
         music.muted = false
+        music.volume = 0.25;
         music.play()
     }
     let msg = document.getElementById("msg")
@@ -48,12 +49,12 @@ function toggleAudio(event) {
     if (audio.paused) {
         audio.currentTime = 0
         audio.play()
-        icon.classList.remove("fa-volume-off")
-        icon.classList.add("fa-volume-loud")
+        icon.classList.remove("fa-volume-xmark")
+        icon.classList.add("fa-volume-high")
     } else {
         audio.pause()
-        icon.classList.remove("fa-volume-loud")
-        icon.classList.add("fa-volume-off")
+        icon.classList.remove("fa-volume-high")
+        icon.classList.add("fa-volume-xmark")
     }
 }
 
