@@ -36,7 +36,7 @@ window.onload = () => checkTime()
 const MESSAGE_PARTS = [
     "...",
     "Hey!",
-    "Don't worry, I see you.",
+    "Don't be afraid! Don't worry! I see you.",
     "I appreciate you, for everything that you are, and for everything you will be.",
     "I'll be here for you today.",
     "Whether you're out or not, you're still here.",
@@ -51,4 +51,24 @@ const MESSAGE_PARTS = [
     "No one can stop you.",
     "Because you're powerful.",
     "Happy Trans Day of Visibility."
+]
+
+const MESSAGE_AUDIO_PATHS = [
+    "media/audio/complete_silence.wav",
+    "media/audio/hey.wav",
+    "media/audio/dontworry.wav",
+    "media/audio/appreciate.wav",
+    "media/audio/here.wav",
+    "media/audio/outnot.wav",
+    "media/audio/valid.wav",
+    "media/audio/relate.wav",
+    "media/audio/flag.wav",
+    "media/audio/pipe_dreams.wav",
+    "media/audio/lost.wav",
+    "media/audio/found.wav",
+    "media/audio/hope.wav",
+    "media/audio/here_2.wav",
+    "media/audio/stop.wav",
+    "media/audio/powerful.wav",
+    "media/audio/tdov.wav"
 ]
