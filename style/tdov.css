@@ -144,8 +144,11 @@
 
 .msg-sound > .fa-solid {
     font-size: 60px;
+    transition: transform 0.25s ease-in-out;
 }
 
 .msg-sound > .fa-solid:hover {
     cursor: pointer;
+    transform-origin: center;
+    transform: scale(1.1);
 }
