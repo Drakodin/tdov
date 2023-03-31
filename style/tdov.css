@@ -1,0 +1,53 @@
+.bg-1 {
+    background: linear-gradient(120deg, var(--amaranth-pink), var(--amaranth-pink-25) 70.71%),
+                linear-gradient(250deg, var(--white), var(--white-25) 70.71%),
+                linear-gradient(20deg, var(--maya-blue), var(--maya-blue-25) 70.71%);
+    animation: ripple infinite linear 6s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    content: "";
+}
+
+.bg-2 {
+    background: linear-gradient(120deg, var(--maya-blue), var(--maya-blue-25) 70.71%),
+                linear-gradient(250deg, var(--amaranth-pink), var(--amaranth-pink-25) 70.71%),
+                linear-gradient(20deg, var(--white), var(--white-25) 70.71%);
+    animation: ripple infinite linear 6s;
+    animation-delay: 2s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    content: "";
+}
+
+.bg-3 {
+    background: linear-gradient(120deg, var(--white), var(--white-25) 70.71%),
+                linear-gradient(250deg, var(--maya-blue), var(--maya-blue-25) 70.71%),
+                linear-gradient(20deg, var(--amaranth-pink), var(--amaranth-pink-25) 70.71%);
+    animation: ripple infinite linear 6s;
+    animation-delay: 4s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    content: "";
+}
+
+.bg {
+    transform-origin: center;
+}
+
+@keyframes ripple {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}

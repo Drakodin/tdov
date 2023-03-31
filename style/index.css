@@ -1,0 +1,13 @@
+:root {
+    --amaranth-pink: #f19cbb;
+    --maya-blue: #73c2fb;
+    --white: #ffffff;
+    --amaranth-pink-25: #f19cbb40;
+    --maya-blue-25: #73c2fb40;
+    --white-25: #ffffff40;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
