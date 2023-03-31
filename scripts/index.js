@@ -24,18 +24,29 @@ function start() {
 function changeMessage(event) {
     let msg = document.getElementById("msg")
     let dir = event.target.dataset.direction
-    console.log(dir)
+    let audio = document.querySelector(".msg-audio")
     // Move right, else left
     if (dir === "right") {
         if (msgIdx + 1 < MESSAGE_PARTS.length) {
-            ++msgIdx;
+            msgIdx++;
             msg.innerHTML = MESSAGE_PARTS[msgIdx]
+            audio.currentTime = 0
+            audio.src = MESSAGE_AUDIO_PATHS[msgIdx]
+            audio.pause()
         }
     } else {
-        if (msgIdx - 1 > 0) {
-            --msgIdx;
+        if (msgIdx - 1 > -1) {
+            msgIdx--;
             msg.innerHTML = MESSAGE_PARTS[msgIdx]
+            audio.currentTime = 0
+            audio.src = MESSAGE_AUDIO_PATHS[msgIdx]
+            audio.pause()
         }
+    }
+
+    // Default silence
+    if (audio.src.endsWith("undefined")) {
+        audio.src = MESSAGE_AUDIO_PATHS[0]
     }
 }
 
@@ -43,19 +54,18 @@ for (let button of document.querySelectorAll(".control")) {
     button.addEventListener("click", changeMessage)
 }
 
-function toggleAudio(event) {
+async function toggleAudio(event) {
     let audio = document.querySelector(".msg-audio")
     let icon = event.target;
-    if (audio.paused) {
+    if (audio.muted) {
+        audio.muted = false
         audio.currentTime = 0
-        audio.play()
-        icon.classList.remove("fa-volume-xmark")
-        icon.classList.add("fa-volume-high")
+        await audio.play()
     } else {
-        audio.pause()
-        icon.classList.remove("fa-volume-high")
-        icon.classList.add("fa-volume-xmark")
+        audio.muted = true
+        await audio.pause()
     }
 }
 
 document.querySelector(".msg-sound-control").addEventListener("click", toggleAudio)
+document.querySelector(".msg-audio").muted = true
