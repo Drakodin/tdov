@@ -21,7 +21,8 @@ const checkTime = (time = null) => {
         }
     } else {
         let content = sessionStorage.getItem("webContent")
-        if (content) {
+        let body = document.querySelector("body")
+        if (content && !body) {
             let body = document.createElement("body")
             let html = document.querySelector("html")
             body.innerHTML = content

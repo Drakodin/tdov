@@ -16,6 +16,13 @@ function start() {
     }
     let msg = document.getElementById("msg")
     msg.innerHTML = MESSAGE_PARTS[msgIdx]
+
+    // Add listeners
+    document.querySelector(".msg-sound-control").addEventListener("click", toggleAudio)
+    for (let button of document.querySelectorAll(".control")) {
+        button.addEventListener("click", changeMessage)
+    }
+
     setTimeout(() => {
         welcome.remove()
     }, 2500)
@@ -56,10 +63,6 @@ function changeMessage(event) {
     }
 }
 
-for (let button of document.querySelectorAll(".control")) {
-    button.addEventListener("click", changeMessage)
-}
-
 async function toggleAudio() {
     let audio = document.querySelector(".msg-audio")
     if (audio.paused) {
@@ -67,5 +70,3 @@ async function toggleAudio() {
         await audio.play()
     }
 }
-
-document.querySelector(".msg-sound-control").addEventListener("click", toggleAudio)
