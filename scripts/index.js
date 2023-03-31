@@ -33,6 +33,12 @@ function changeMessage(event) {
             audio.currentTime = 0
             audio.src = MESSAGE_AUDIO_PATHS[msgIdx]
             audio.pause()
+        } else {
+            // Detach message box, attach resources
+            let parent = document.querySelector(".msg-container")
+            parent.style.display = "none";
+            let resources = document.querySelector(".resources")
+            resources.style.display = "flex";
         }
     } else {
         if (msgIdx - 1 > -1) {
