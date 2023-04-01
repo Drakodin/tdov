@@ -93,9 +93,21 @@
     width: 80%;
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-height: 800px) {
     .msg-container {
         top: 40%;
+    }
+}
+
+@media only screen and (max-height: 740px) {
+    .msg-container {
+        top: 30%;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    .msg-container {
+        top: 20%;
     }
 }
 
