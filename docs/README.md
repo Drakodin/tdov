@@ -12,6 +12,7 @@ It's possible to see all of this w/o it being TDOV by calling the child function
 * The volume icon can be clicked to play the message on the screen.
 * The arrows beneath the message box control which part of the overarching message to play.
 * Resources will be available at the end.
+* (Recommended) Use full-screen mode in browsers. Due to media queries to support smaller screen devices, desktop versions will uptake the changes and the message bar will be further towards the center of the page.
 
 ## Known Issues
 Due to the Audio API in browsers being asynchronous, playing the audio consecutively with every message swap is very difficult.
