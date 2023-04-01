@@ -84,13 +84,19 @@
 .msg-container {
     position: fixed;
     margin: 0;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80%;
+}
+
+@media only screen and (max-width: 360px) {
+    .msg-container {
+        top: 40%;
+    }
 }
 
 .msg-control {
