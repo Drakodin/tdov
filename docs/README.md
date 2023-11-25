@@ -7,7 +7,16 @@ It will look like a blank site for every day except TDOV (March 31). On TDOV, it
 ### Can't Wait? Activate it yourself!
 It's possible to see all of this w/o it being TDOV by calling the child function with a date that refers to March 31. It does consume UNIX timestamps so do note this.
 
-### Usability
+#### Quick Activation Script
+If it is not March 31st, you can call the function that checks the day with a date object that **is** March 31st. Open the developer console in the browser of your choice and type the following:
+```js
+// Months are 0-indexed in JS/TS
+let a = new Date(2023, 2, 31, 9, 0, 0)
+checkTime(a)
+```
+Then the site should be good to go!
+
+### Usage Guide
 * Click "Enter" to access the site.
 * The volume icon can be clicked to play the message on the screen.
 * The arrows beneath the message box control which part of the overarching message to play.
