@@ -35,41 +35,51 @@ const checkTime = (time = null) => {
 window.onload = () => checkTime()
 
 const MESSAGE_PARTS = [
-    "...",
-    "Hey!",
-    "Don't be afraid! Don't worry! I see you.",
-    "I appreciate you, for everything that you are, and for everything you will be.",
-    "I'll be here for you today.",
-    "Whether you're out or not, you're still here.",
-    "You're valid.",
-    "For those who aren't out, I relate.",
-    "With my folded flag on my bedroom floor.",
-    "Images and distant pipe dreams of life in the future.",
-    "I was lost too, broken I said.",
-    "But people found me, reached out.",
-    "And gave me back the hope I lost then.",
-    "If no one else is here for you, know that I am.",
-    "No one can stop you.",
-    "Because you're powerful.",
-    "Happy Trans Day of Visibility."
+    [
+        "...",
+        "Hey!",
+        "Don't be afraid! Don't worry! I see you.",
+        "I appreciate you, for everything that you are, and for everything you will be.",
+        "I'll be here for you today.",
+        "Whether you're out or not, you're still here.",
+        "You're valid.",
+        "For those who aren't out, I relate.",
+        "With my folded flag on my bedroom floor.",
+        "Images and distant pipe dreams of life in the future.",
+        "I was lost too, broken I said.",
+        "But people found me, reached out.",
+        "And gave me back the hope I lost then.",
+        "If no one else is here for you, know that I am.",
+        "No one can stop you.",
+        "Because you're powerful.",
+        "Happy Trans Day of Visibility."
+    ],
+    [
+        "..."
+    ]
 ]
 
 const MESSAGE_AUDIO_PATHS = [
-    "media/audio/complete_silence.wav",
-    "media/audio/hey.wav",
-    "media/audio/dontworry.wav",
-    "media/audio/appreciate.wav",
-    "media/audio/here.wav",
-    "media/audio/outnot.wav",
-    "media/audio/valid.wav",
-    "media/audio/relate.wav",
-    "media/audio/flag.wav",
-    "media/audio/pipe_dreams.wav",
-    "media/audio/lost.wav",
-    "media/audio/found.wav",
-    "media/audio/hope.wav",
-    "media/audio/here_2.wav",
-    "media/audio/stop.wav",
-    "media/audio/powerful.wav",
-    "media/audio/tdov.wav"
+    [
+        "media/audio/2023/complete_silence.wav",
+        "media/audio/2023/hey.wav",
+        "media/audio/2023/dontworry.wav",
+        "media/audio/2023/appreciate.wav",
+        "media/audio/2023/here.wav",
+        "media/audio/2023/outnot.wav",
+        "media/audio/2023/valid.wav",
+        "media/audio/2023/relate.wav",
+        "media/audio/2023/flag.wav",
+        "media/audio/2023/pipe_dreams.wav",
+        "media/audio/2023/lost.wav",
+        "media/audio/2023/found.wav",
+        "media/audio/2023/hope.wav",
+        "media/audio/2023/here_2.wav",
+        "media/audio/2023/stop.wav",
+        "media/audio/2023/powerful.wav",
+        "media/audio/2023/tdov.wav"
+    ],
+    [
+
+    ]
 ]

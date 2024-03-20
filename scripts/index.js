@@ -1,6 +1,7 @@
 // Binding to the enter message rather than the screen
 // For browsers, entry screen required as autoplay is disallowed
 let clickCount = 0
+let msgVersion = 0;
 
 let msgIdx = 0
 function start() {
@@ -15,7 +16,7 @@ function start() {
         music.play()
     }
     let msg = document.getElementById("msg")
-    msg.innerHTML = MESSAGE_PARTS[msgIdx]
+    msg.innerHTML = MESSAGE_PARTS[msgVersion][msgIdx]
 
     // Add listeners
     document.querySelector(".msg-sound-control").addEventListener("click", toggleAudio)
@@ -34,11 +35,11 @@ function changeMessage(event) {
     let audio = document.querySelector(".msg-audio")
     // Move right, else left
     if (dir === "right") {
-        if (msgIdx + 1 < MESSAGE_PARTS.length) {
+        if (msgIdx + 1 < MESSAGE_PARTS[msgVersion].length) {
             msgIdx++;
-            msg.innerHTML = MESSAGE_PARTS[msgIdx]
+            msg.innerHTML = MESSAGE_PARTS[msgVersion][msgIdx]
             audio.currentTime = 0
-            audio.src = MESSAGE_AUDIO_PATHS[msgIdx]
+            audio.src = MESSAGE_AUDIO_PATHS[msgVersion][msgIdx]
             audio.pause()
         } else {
             // Detach message box, attach resources
@@ -50,16 +51,16 @@ function changeMessage(event) {
     } else {
         if (msgIdx - 1 > -1) {
             msgIdx--;
-            msg.innerHTML = MESSAGE_PARTS[msgIdx]
+            msg.innerHTML = MESSAGE_PARTS[msgVersion][msgIdx]
             audio.currentTime = 0
-            audio.src = MESSAGE_AUDIO_PATHS[msgIdx]
+            audio.src = MESSAGE_AUDIO_PATHS[msgVersion][msgIdx]
             audio.pause()
         }
     }
 
     // Default silence
     if (audio.src.endsWith("undefined")) {
-        audio.src = MESSAGE_AUDIO_PATHS[0]
+        audio.src = MESSAGE_AUDIO_PATHS[msgVersion][0]
     }
 }
 
@@ -69,4 +70,9 @@ async function toggleAudio() {
         audio.currentTime = 0
         await audio.play()
     }
+}
+
+function setMessageVersion() {
+    let selector = document.getElementById("message-selector");
+    msgVerion = selector.options[selector.selectedIndex];
 }

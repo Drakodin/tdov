@@ -11,7 +11,7 @@ It's possible to see all of this w/o it being TDOV by calling the child function
 If it is not March 31st, you can call the function that checks the day with a date object that **is** March 31st. Open the developer console in the browser of your choice and type the following:
 ```js
 // Months are 0-indexed in JS/TS
-let a = new Date(2023, 2, 31, 9, 0, 0)
+let a = new Date(2023, 2, 31, 9, 0, 0) // This is March 31st, 2023, at 9 AM
 checkTime(a)
 ```
 Then the site should be good to go!
@@ -27,6 +27,13 @@ Then the site should be good to go!
 Due to the Audio API in browsers being asynchronous, playing the audio consecutively with every message swap is very difficult.
 
 My microphone picked up on my breathing so you'll hear puffs of air. I don't have a filter, just the mic itself.
+
+## Update 2024 - New Audio!?
+That's right, for each year (until I forget to update it), I'll update the audio! It's no fun having a website that's not up to date, especially one like this one.
+
+There will be page to toggle it between the years that can accessed before the website starts loading.
+
+Also 2024's audio is noticeably cleaner. I put out the first version of this site *the day of* as I started working on it on the 30th. Audio was recorded using a phone microphone very late at night and I never bothered to clean it up. 2024 is different, as I've got my own home office and have my equipment set up.
 
 ## Credits
 Music: https://www.purple-planet.com

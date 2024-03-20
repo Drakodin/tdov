@@ -65,7 +65,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 2.5s ease-in;
+    transition: 2.5s ease-in;
 }
 
 .welcome-msg {
@@ -74,11 +74,6 @@
     color: #eee;
     transition: transform 0.25s ease-in-out;
     opacity: inherit;
-}
-
-.welcome-msg:hover {
-    transform: scale(1.1);
-    cursor: pointer;
 }
 
 .msg-container {
@@ -91,6 +86,11 @@
     flex-direction: column;
     align-items: center;
     width: 80%;
+}
+
+.clickable:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 @media only screen and (max-height: 800px) {
@@ -127,16 +127,8 @@
     justify-content: space-between;
 }
 
-.msg-control:hover {
-    cursor: pointer;
-}
-
 .msg-control > .fa-solid {
     transition: transform 0.25s ease-in-out;
-}
-
-.msg-control > .fa-solid:hover {
-    transform: scale(1.25);
 }
 
 .msg-txt {
@@ -164,12 +156,6 @@
 .msg-sound > .fa-solid {
     font-size: 60px;
     transition: transform 0.25s ease-in-out;
-}
-
-.msg-sound > .fa-solid:hover {
-    cursor: pointer;
-    transform-origin: center;
-    transform: scale(1.1);
 }
 
 .resources {
