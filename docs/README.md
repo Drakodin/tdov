@@ -23,6 +23,10 @@ Then the site should be good to go!
 * Resources will be available at the end.
 * (Recommended) Use full-screen mode in browsers. Due to media queries to support smaller screen devices, desktop versions will uptake the changes and the message bar will be further towards the center of the page.
 
+To change the message being displayed, click on the gear on the right of the screen to change the year of the message. Each year is accompanied by a simple artwork to highlight a key part of the message.
+
+Swapping the year automatically swaps which message is being used. To save your changes, click on the spinning gear. This navigates the page back to the menu.
+
 ## Known Issues
 Due to the Audio API in browsers being asynchronous, playing the audio consecutively with every message swap is very difficult.
 
@@ -34,6 +38,8 @@ That's right, for each year (until I forget to update it), I'll update the audio
 There will be page to toggle it between the years that can accessed before the website starts loading.
 
 Also 2024's audio is noticeably cleaner. I put out the first version of this site *the day of* as I started working on it on the 30th. Audio was recorded using a phone microphone very late at night and I never bothered to clean it up. 2024 is different, as I've got my own home office and have my equipment set up.
+
+The script and clips should be up and deployed before the 31st of March each year.
 
 ## Credits
 Music: https://www.purple-planet.com
