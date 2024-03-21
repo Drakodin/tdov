@@ -1,0 +1,119 @@
+.option-menu {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 2.5s ease-in;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(0);
+    flex-direction: column;
+}
+
+.menu-access {
+    position: fixed;
+    top: 50%;
+    right: min(10%, 60px);
+    font-size: 3em;
+    transform-origin: center;
+    transition: all ease-in-out 0.25s;
+    display: flex;
+    z-index: 3;
+}
+
+.off-right {
+    transform: translateX(100%) !important;
+}
+
+.off-left {
+    transform: translateX(-100%) !important;
+}
+
+#menu-bg {
+    background: linear-gradient(120deg, var(--amaranth-pink), var(--amaranth-pink-25) 70.71%),
+    linear-gradient(0deg, var(--white), #ffffff80 70.71%),
+    linear-gradient(260deg, var(--maya-blue), var(--maya-blue-25) 70.71%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 2.5s ease-in;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.menu-idle:hover {
+    transform: rotateZ(-30deg);
+}
+
+.menu-access:hover {
+    cursor: pointer;
+}
+
+.wait-animation {
+    animation: wait-spin infinite 2s linear;
+}
+
+.menu-version-selector {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    height: 10%;
+    width: 50%;
+}
+
+.menu-version-selector > * {
+    margin: auto;
+}
+
+.menu-version-selector > i {
+    font-size: 2em;
+    transition: transform 0.25s ease-in-out;
+}
+
+.menu-version-text {
+    display: flex;
+    font-size: 2em;
+    font-family: "Merienda";
+    width: 80%;
+    border: solid white 4px;
+    box-sizing: border-box;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 6% 20%;
+    border-bottom-left-radius: 6% 20%;
+    border-top-right-radius: 6% 20%;
+    border-bottom-right-radius: 6% 20%;
+    justify-content: center;
+    align-items: center;
+    opacity: 100;
+    transition: opacity 0.5s linear;
+}
+
+.menu-version-text > div {
+    text-align: center;
+}
+
+#menu-version-art {
+    height: 30%;
+    width: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.menu-version-2023 {
+    background-image: url("assets/2023.png");
+}
+
+@keyframes wait-spin {
+    0% {
+        transform: rotateZ(0deg)
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

@@ -6,7 +6,11 @@ let msgVersion = 0;
 let msgIdx = 0
 function start() {
     let welcome = document.querySelector(".welcome-popover")
+    let menuBg = document.getElementById("menu-bg");
+    let menuSettingsAccess = document.getElementById("settings-gear");
     welcome.style.opacity = 0;
+    menuBg.style.opacity = 0;
+    menuSettingsAccess.style.opacity = 0;
     let music = document.querySelector(".bg-music")
     if (music && clickCount === 0) {
         clickCount++;
@@ -26,6 +30,8 @@ function start() {
 
     setTimeout(() => {
         welcome.remove()
+        menuBg.remove()
+        menuSettingsAccess.remove()
     }, 2500)
 }
 
@@ -72,7 +78,7 @@ async function toggleAudio() {
     }
 }
 
-function setMessageVersion() {
-    let selector = document.getElementById("message-selector");
-    msgVerion = selector.options[selector.selectedIndex];
+function updateMessageVersion() {
+    let selector = document.getElementById("menu-version");
+    msgVersion = Number.parseInt(selector.dataset.version);
 }
