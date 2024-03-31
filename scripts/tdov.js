@@ -56,7 +56,7 @@ const MESSAGE_PARTS = [
     ],
     [
         "...",
-        "This year has rough.",
+        "This year has been rough.",
         "Let's get back to the basics.",
         "Trans rights are human rights.",
         "Everyone is valid and there's no need to feel alone.",
