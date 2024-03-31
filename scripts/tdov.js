@@ -55,7 +55,17 @@ const MESSAGE_PARTS = [
         "Happy Trans Day of Visibility."
     ],
     [
-        "..."
+        "...",
+        "This year has rough.",
+        "Let's get back to the basics.",
+        "Trans rights are human rights.",
+        "Everyone is valid and there's no need to feel alone.",
+        "We stand united, together we make progress.",
+        "Be joyous, be free.",
+        "Rise up, from the ruins, from dystopia.",
+        "And raise your colors.",
+        "Stand strong and no one can take you down.",
+        "Happy Trans Day of Visibility."
     ]
 ]
 
@@ -80,6 +90,16 @@ const MESSAGE_AUDIO_PATHS = [
         "media/audio/2023/tdov.wav"
     ],
     [
-
+        "media/audio/2023/complete_silence.wav",
+        "media/audio/2024/rough.wav",
+        "media/audio/2024/basics.wav",
+        "media/audio/2024/trahr.wav",
+        "media/audio/2024/valid.wav",
+        "media/audio/2024/united.wav",
+        "media/audio/2024/joyous.wav",
+        "media/audio/2024/ruins.wav",
+        "media/audio/2024/colors.wav",
+        "media/audio/2024/strong.wav",
+        "media/audio/2024/tdov.wav",
     ]
 ]

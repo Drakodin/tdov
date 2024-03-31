@@ -37,9 +37,12 @@ That's right, for each year (until I forget to update it), I'll update the audio
 
 There will be page to toggle it between the years that can accessed before the website starts loading.
 
-Also 2024's audio is noticeably cleaner. I put out the first version of this site *the day of* as I started working on it on the 30th. Audio was recorded using a phone microphone very late at night and I never bothered to clean it up. 2024 is different, as I've got my own home office and have my equipment set up.
+The script and clips should be up and deployed before the 31st of March each year. If they're not there before then, it's usually because I was busy with work and other tasks.
 
-The script and clips should be up and deployed before the 31st of March each year.
+Also if I sound different from 2023, it's because I did a few things differently.
+1. Properly processed the audio
+2. Used a better microphone
+3. Used a voice that isn't my natural speaking tone due to throat problems. It happens, 2024 is one of those instances where it happened so I swapped up the voice to reduce vocal fry.
 
 ## Credits
 Music: https://www.purple-planet.com
