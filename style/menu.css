@@ -109,6 +109,31 @@
     background-image: url("assets/2023.png");
 }
 
+.menu-version-2024 {
+    background-image: url("assets/2024.png");
+}
+
+/*
+** This is for an unimplemented feature **
+.menu-renav {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    right: min(5%, 30px);
+    top: min(5%, 30px);
+    transform-origin: center;
+    border-radius: 8px;
+    padding: 4px;
+    width: min(10%, 40px);
+    border: solid white;
+    font-family: "EduNSWACTFoundation";
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-style: bold;
+}
+*/
+
 @keyframes wait-spin {
     0% {
         transform: rotateZ(0deg)
