@@ -44,7 +44,14 @@ Also if I sound different from 2023, it's because I did a few things differently
 2. Used a better microphone
 3. Used a voice that isn't my natural speaking tone due to throat problems. It happens, 2024 is one of those instances where it happened so I swapped up the voice to reduce vocal fry.
 
+## Update 2025 - What did you do!?
+I went a little crazy and I also used my better mic to do it. 
+
+I also can't sing, but I tried anyway.
+
 ## Credits
 Music: https://www.purple-planet.com
+
+2025 music: See message_2025.md. I don't know how to credit it, it's a Chinese propaganda song that became a meme in 2021 then stayed a meme ever.
 
 VA: Myself
