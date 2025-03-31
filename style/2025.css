@@ -1,0 +1,22 @@
+#anim-div-root {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    transform-origin: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateZ(-30deg);
+    z-index: 10000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.center-div-eo {
+    background-image: url("assets/2025_angle_div.png");
+}
+
+.center-div-song {
+    transform: translate(-50%, -50%) !important;
+    transition: background-image none
+}

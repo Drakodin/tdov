@@ -25,7 +25,7 @@ function start() {
 
     // Add listeners
     document.querySelector(".msg-sound-control").addEventListener("click", toggleAudio)
-    for (let button of document.querySelectorAll(".control")) {
+    for (let button of document.querySelectorAll(".msg-control")) {
         button.addEventListener("click", changeMessage)
     }
 
@@ -36,17 +36,24 @@ function start() {
     }, 2500)
 }
 
-function changeMessage(event) {
+async function changeMessage(event) {
     let msg = document.getElementById("msg")
     let dir = event.target.dataset.direction
     let audio = document.querySelector(".msg-audio")
     // Move right, else left
     if (dir === "right") {
         // Load the non sentimental version matching the year
-        if (isRedirectYear(msgVersion) && sPlayed === false) {
-            loadModule(msgVersion)
+        if (isRedirectYear(msgVersion) && !sPlayed) {
+            await loadModule(msgVersion)
             sPlayed = true
-            return
+            return new Promise(res => {})
+        }
+
+        // Reset listeners because they were removed
+        if (sPlayed) {
+            for (let button of document.querySelectorAll(".msg-control")) {
+                button.addEventListener("click", changeMessage)
+            }
         }
 
         if (msgIdx + 1 < MESSAGE_PARTS[msgVersion].length) {

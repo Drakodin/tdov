@@ -1,26 +1,74 @@
-const post2025 = () => {
+const post2025 = async () => {
     let mediaPath = "media/audio/2025/yeah_you_heard_it.wav"
 
     let audioPlayer = document.querySelector(".bg-music")
-
+    let lockMap = []
     // Use async locking
-    lockedAudio(mediaPath, audioPlayer).then(() => {
-        let audioControls = document.querySelectorAll(".msg-control")
+    await lockedAudio(mediaPath, audioPlayer, lockMap)
 
-        audioControls.forEach(node => node.disabled = false)
+    for (let button of document.querySelectorAll(".msg-control")) {
+        button.addEventListener("click", changeMessage)
+    }
+
+    document.getElementById("msg").innerText = "No one can stop me or anyone from celebrating, buttons work again, click for helpful resources."
+    document.getElementsByTagName("body")[0].removeChild(
+        document.getElementById("anim-div-root")
+    )
+
+    lockMap.forEach(interval => {
+        clearInterval(interval)
     })
 }
 
-const lockedAudio = async (mediaPath, audioPlayer) => {
+const lockedAudio = async (mediaPath, audioPlayer, lockMap) => {
     let audioControls = document.querySelectorAll(".msg-control")
 
-    audioControls.forEach(node => node.disabled = true)
+    audioControls.forEach(node => {
+        node.removeEventListener("click", changeMessage);
+    })
 
-    audioPlayer.pause()
-    audioPlayer.volume = 0.5;
-    audioPlayer.src = mediaPath
-    audioPlayer.loop = false
-    audioPlayer.play()
+    return new Promise(res => {
+        audioPlayer.pause()
+        audioPlayer.volume = 0.5;
+        audioPlayer.src = mediaPath
+        audioPlayer.loop = false
+        audioPlayer.play()
+
+        document.getElementById("msg").innerText =
+            "Read message_2025.md for more information about this."
+        
+    
+        setTimeout(() => {
+            render2025(lockMap)
+        }, 3000)
+
+        audioPlayer.onended = res
+    })
+}
+
+const render2025 = (lockMap) => {
+    let imgId = 0;
+    let anim = document.createElement("div")
+    anim.className = "center-div-eo"
+    anim.id = "anim-div-root"
+    let root = document.getElementsByTagName("body")[0]
+    root.appendChild(anim)
+    setTimeout(() => {
+        root.removeChild(anim)
+    }, 2000)
+
+    setTimeout(() => {
+        anim.className = "center-div-song"
+        root.appendChild(anim)
+        lockMap.push(setInterval(() => {
+            runAnimLoop2025(anim, imgId)
+            imgId++;
+        }, 666)) // Yeah, 2/3 of a second, how fitting
+    }, 15000)
+}
+
+const runAnimLoop2025 = (animRoot, img) => {
+    animRoot.style.backgroundImage = `url(style/assets/2025-anim/march_${(img % 4) + 1}.png`
 }
 
 // This was added in 2025 because in 2025, TDOV was barred as a holiday by the president.
@@ -40,6 +88,6 @@ function isRedirectYear(version) {
     return SP_VERSIONS.includes(version);
 }
 
-function loadModule(version) {
+async function loadModule(version) {
     SP_VERSIONS_MAP[version]["animation"]()
 }
