@@ -113,6 +113,10 @@
     background-image: url("assets/2024.png");
 }
 
+.menu-version-2025 {
+    background-image: url("assets/2025.png");
+}
+
 /*
 ** This is for an unimplemented feature **
 .menu-renav {

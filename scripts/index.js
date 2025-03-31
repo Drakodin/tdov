@@ -1,7 +1,8 @@
 // Binding to the enter message rather than the screen
 // For browsers, entry screen required as autoplay is disallowed
 let clickCount = 0
-let msgVersion = 0;
+let msgVersion = 2; // This will update every year
+let sPlayed = false; // Only for redirects
 
 let msgIdx = 0
 function start() {
@@ -41,6 +42,13 @@ function changeMessage(event) {
     let audio = document.querySelector(".msg-audio")
     // Move right, else left
     if (dir === "right") {
+        // Load the non sentimental version matching the year
+        if (isRedirectYear(msgVersion) && sPlayed === false) {
+            loadModule(msgVersion)
+            sPlayed = true
+            return
+        }
+
         if (msgIdx + 1 < MESSAGE_PARTS[msgVersion].length) {
             msgIdx++;
             msg.innerHTML = MESSAGE_PARTS[msgVersion][msgIdx]
@@ -48,11 +56,6 @@ function changeMessage(event) {
             audio.src = MESSAGE_AUDIO_PATHS[msgVersion][msgIdx]
             audio.pause()
         } else {
-            // Load the non sentimental version matching the year
-            if (isRedirectYear(msgVersion)) {
-                loadModule(msgVersion)
-            }
-
             // Detach message box, attach resources
             let parent = document.querySelector(".msg-container")
             parent.style.display = "none";
