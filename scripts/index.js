@@ -48,6 +48,11 @@ function changeMessage(event) {
             audio.src = MESSAGE_AUDIO_PATHS[msgVersion][msgIdx]
             audio.pause()
         } else {
+            // Load the non sentimental version matching the year
+            if (isRedirectYear(msgVersion)) {
+                loadModule(msgVersion)
+            }
+
             // Detach message box, attach resources
             let parent = document.querySelector(".msg-container")
             parent.style.display = "none";

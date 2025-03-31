@@ -66,6 +66,10 @@ const MESSAGE_PARTS = [
         "And raise your colors.",
         "Stand strong and no one can take you down.",
         "Happy Trans Day of Visibility."
+    ],
+    // The audio for 2025 is a giant joke
+    [
+        "..."
     ]
 ]
 
