@@ -1,6 +1,6 @@
 let welcomeActive = true;
 
-const AVAILABLE_YEARS = ["2023", "2024", "2025"]
+const AVAILABLE_YEARS = ["2023", "2024", "2025", "2026"]
 
 function toggleMenu() {
     let gearDiv = document.getElementById("settings-gear");

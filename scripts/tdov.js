@@ -71,6 +71,7 @@ const MESSAGE_PARTS = [
     [
         "..."
     ]
+    // 2026 doesn't even load here
 ]
 
 const MESSAGE_AUDIO_PATHS = [
