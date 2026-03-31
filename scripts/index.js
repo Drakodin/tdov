@@ -1,11 +1,17 @@
 // Binding to the enter message rather than the screen
 // For browsers, entry screen required as autoplay is disallowed
 let clickCount = 0
-let msgVersion = 2; // This will update every year
+let msgVersion = 3; // This will update every year, unless I'm running an s-post, as those use alternate audio channels
 let sPlayed = false; // Only for redirects
 
 let msgIdx = 0
 function start() {
+    if (msgVersion == 3) {
+        let ai = new TdovAI()
+        // ai.tts()
+        return
+    }
+
     let welcome = document.querySelector(".welcome-popover")
     let menuBg = document.getElementById("menu-bg");
     let menuSettingsAccess = document.getElementById("settings-gear");
