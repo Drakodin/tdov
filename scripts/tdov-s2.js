@@ -21,6 +21,7 @@ class TdovAI {
      */
     _replace_root = () => {
         let body = document.querySelector("body")
+        sessionStorage.setItem("webContent", body.innerHTML)
         body.innerHTML = ""
         body.style.height = "100%"
 
